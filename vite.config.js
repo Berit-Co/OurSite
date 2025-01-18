@@ -4,8 +4,6 @@ import { defineConfig } from "vite"
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer"
 
 export default defineConfig({
-  base: "./",
-  publicDir: "public",
   plugins: [
     react(),
     ViteImageOptimizer({
@@ -53,26 +51,7 @@ export default defineConfig({
           }
           return `assets/[name]-[hash][extname]`
         },
-        entryFileNames: "assets/[name]-[hash].js",
-        chunkFileNames: "assets/[name]-[hash].js",
       },
     },
-  },
-  server: {
-    port: 3000,
-    open: true,
-    hmr: {
-      overlay: true,
-    },
-  },
-  optimizeDeps: {
-    esbuildOptions: {
-      minifyWhitespace: true,
-      minifyIdentifiers: true,
-      minifySyntax: true,
-      drop: ["console", "debugger"],
-      legalComments: "none",
-    },
-    include: ["react", "react-dom", "framer-motion"],
   },
 })
