@@ -16,8 +16,7 @@
   "requirePragma": false,
   "plugins": [
     "prettier-plugin-tailwindcss",
-    "@ianvs/prettier-plugin-sort-imports",
-    "prettier-plugin-classnames"
+    "@ianvs/prettier-plugin-sort-imports"
   ],
   "importOrder": [
     "^(react/(.*)$)|^(react$)",

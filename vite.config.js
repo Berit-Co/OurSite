@@ -35,27 +35,18 @@ export default defineConfig({
     target: "es2020",
     cssMinify: true,
     rollupOptions: {
+      input: {
+        main: fileURLToPath(new URL("./index.html", import.meta.url)),
+      },
       output: {
-        manualChunks: (id) => {
-          if (
-            id.includes("node_modules/react/") ||
-            id.includes("node_modules/react-dom/")
-          ) {
-            return "react-vendor"
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split(".")
+          const ext = info[info.length - 1]
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
+            return `assets/img/[name]-[hash][extname]`
           }
-          if (id.includes("node_modules/framer-motion")) {
-            return "animation-vendor"
-          }
-          if (id.includes("/components/animation/")) {
-            return "animation-components"
-          }
-          if (id.includes("/components/sections/")) {
-            return "section-components"
-          }
+          return `assets/[name]-[hash][extname]`
         },
-        entryFileNames: "assets/[name]-[hash].js",
-        chunkFileNames: "assets/[name]-[hash].js",
-        assetFileNames: "assets/[name]-[hash].[ext]",
       },
     },
   },

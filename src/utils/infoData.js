@@ -1,13 +1,13 @@
-import angeleImg from "../assets/img/angele.jpeg"
-import debbieImg from "../assets/img/debbie.png"
-import kimImg from "../assets/img/kim.png"
-import sandraImg from "../assets/img/sandra.png"
 import {
   IconCloudSolutions,
   IconMobileApp,
   IconUiUx,
   IconWebDevelopment,
-} from "../components/ui/icons"
+} from "@/components/ui/icons"
+import angeleImg from "@/assets/img/angele.jpeg"
+import debbieImg from "@/assets/img/debbie.png"
+import kimImg from "@/assets/img/kim.png"
+import sandraImg from "@/assets/img/sandra.png"
 
 const sections = [
   {
