@@ -1,0 +1,12 @@
+node_modules
+dist
+coverage
+build
+.vite
+.next
+.vscode
+.eslintcache
+.prettierrc
+.npmrc
+.gitignore
+.env

@@ -1,0 +1,19 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+    "csstools.postcss",
+    "christian-kohler.path-intellisense",
+    "formulahendry.auto-rename-tag",
+    "dsznajder.es7-react-js-snippets",
+    "yoavbls.pretty-ts-errors",
+    "naumovs.color-highlight",
+    "vincaslt.highlight-matching-tag",
+    "pkief.material-icon-theme",
+    "mikestead.dotenv",
+    "eamodio.gitlens",
+    "github.vscode-github-actions",
+    "ms-vsliveshare.vsliveshare"
+  ]
+}
