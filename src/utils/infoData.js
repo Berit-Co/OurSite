@@ -4,10 +4,10 @@ import {
   IconUiUx,
   IconWebDevelopment,
 } from "@/components/ui/icons"
-import angeleImg from "@/assets/img/angele.jpeg"
-import debbieImg from "@/assets/img/debbie.png"
-import kimImg from "@/assets/img/kim.png"
-import sandraImg from "@/assets/img/sandra.png"
+import angeleImg from "@/public/img/angele.jpeg"
+import debbieImg from "@/public/img/debbie.png"
+import kimImg from "@/public/img/kim.png"
+import sandraImg from "@/public/img/sandra.png"
 
 const sections = [
   {
