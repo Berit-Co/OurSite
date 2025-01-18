@@ -1,0 +1,171 @@
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import Footer from "../components/Footer";
+import infoData from "../utils/infoData";
+import {
+  Hero,
+  Stats,
+  Services,
+  Projects,
+  Pricing,
+  Teams,
+  Consultation,
+} from "../components/sections";
+import NavDots from "../components/navigation/NavDots";
+import { getNavigationIds } from "../components/navigation/NavItems";
+
+function LandingPage() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [canScroll, setCanScroll] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [activeSection, setActiveSection] = useState(0);
+
+  // Loading effect
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 4000); // Vänta på loading animation
+
+    const textTimer = setTimeout(() => {
+      setCanScroll(true);
+    }, 7000); // Vänta tills text animation är klar (4s + 3s för text)
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(textTimer);
+    };
+  }, []);
+
+  // Prevent scroll when loading or text animating
+  useEffect(() => {
+    const preventScroll = (e) => {
+      if (!canScroll) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+    };
+
+    if (!canScroll) {
+      document.addEventListener("wheel", preventScroll, { passive: false });
+      document.addEventListener("touchmove", preventScroll, { passive: false });
+    }
+
+    return () => {
+      document.removeEventListener("wheel", preventScroll);
+      document.removeEventListener("touchmove", preventScroll);
+    };
+  }, [canScroll]);
+
+  // Mouse move handler
+  const handleMouseMove = (e) => {
+    setMousePosition({ x: e.clientX, y: e.clientY });
+  };
+
+  // Scroll section handler
+  const scrollToSection = (index) => {
+    const sectionIds = getNavigationIds();
+    const sectionId = sectionIds[index];
+    const element = document.getElementById(sectionId);
+
+    if (element) {
+      const offset = element.offsetTop;
+      window.scrollTo({
+        top: offset,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollToNextSection = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  };
+
+  // Scroll spy effect
+  useEffect(() => {
+    const handleScroll = () => {
+      const position = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const active = Math.round(position / windowHeight);
+      setActiveSection(active);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Data for sections
+  const sections = infoData;
+
+  const statsData = sections[0].stats.map((stat) => {
+    const number = parseInt(stat.number.replace(/[%+]/g, ""));
+    const suffix = stat.number.match(/[%+]/g)?.[0] || "";
+
+    return {
+      number,
+      label: stat.label,
+      suffix,
+    };
+  });
+
+  return (
+    <div
+      onMouseMove={handleMouseMove}
+      className="bg-black text-white overflow-x-hidden">
+      {/* Floating Gradient Orb */}
+      <motion.div
+        className="fixed w-[500px] h-[500px] rounded-full blur-[100px] pointer-events-none"
+        animate={{
+          x: mousePosition.x - 250,
+          y: mousePosition.y - 250,
+        }}
+        transition={{ type: "spring", damping: 30 }}
+        style={{
+          background:
+            "radial-gradient(circle, rgba(232,212,180,0.1) 0%, rgba(0,0,0,0) 70%)",
+        }}
+      />
+
+      <div className="min-h-screen overflow-x-hidden">
+        <section id="hero">
+          <Hero
+            isLoading={isLoading}
+            onScrollNext={scrollToNextSection}
+            canScroll={canScroll}
+          />
+        </section>
+        <section id="stats">
+          <Stats stats={statsData} />
+        </section>
+        <section id="services">
+          <Services services={sections[1].services} />
+        </section>
+        <section id="projects">
+          <Projects projects={sections[2].projects} />
+        </section>
+        <section id="pricing">
+          <Pricing plans={sections[3].plans} />
+        </section>
+        <section id="team">
+          <Teams members={sections[4].members} />
+        </section>
+        <section id="consultation">
+          <Consultation />
+        </section>
+        <section id="footer">
+          <Footer />
+        </section>
+      </div>
+
+      <NavDots
+        activeSection={activeSection}
+        scrollToSection={scrollToSection}
+      />
+    </div>
+  );
+}
+
+export default LandingPage;

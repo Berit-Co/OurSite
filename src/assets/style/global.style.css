@@ -1,0 +1,10 @@
+@import "./fonts.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Aeonik", system-ui, sans-serif;
+  }
+}
