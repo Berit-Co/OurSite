@@ -4,6 +4,7 @@ import { defineConfig } from "vite"
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer"
 
 export default defineConfig({
+  base: "/",
   plugins: [
     react(),
     ViteImageOptimizer({
@@ -23,17 +24,15 @@ export default defineConfig({
     }),
   ],
   resolve: {
-    alias: [
-      {
-        find: "@",
-        replacement: fileURLToPath(new URL("./src", import.meta.url)),
-      },
-    ],
+    alias: {
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
+    },
   },
   build: {
     minify: "esbuild",
     target: "es2020",
     cssMinify: true,
+    assetsInclude: ["**/*.png", "**/*.jpg", "**/*.jpeg"],
     assetsDir: "assets",
     rollupOptions: {
       input: {
