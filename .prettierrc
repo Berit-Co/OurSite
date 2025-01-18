@@ -4,9 +4,20 @@
   "singleQuote": false,
   "tabWidth": 2,
   "trailingComma": "es5",
+  "printWidth": 80,
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "embeddedLanguageFormatting": "auto",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxSingleQuote": false,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
   "plugins": [
     "prettier-plugin-tailwindcss",
-    "@ianvs/prettier-plugin-sort-imports"
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-classnames"
   ],
   "importOrder": [
     "^(react/(.*)$)|^(react$)",

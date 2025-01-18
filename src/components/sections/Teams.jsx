@@ -29,7 +29,8 @@ function Team({ members }) {
               <img
                 src={member.img}
                 alt={member.name}
-                className="size-full object-cover object-center grayscale transition-all duration-300 hover:grayscale-0"
+                className="size-full object-cover object-center grayscale transition-all duration-300
+                  hover:grayscale-0"
               />
             </div>
             <h3 className="mb-2 text-center text-xl font-medium">

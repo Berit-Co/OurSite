@@ -1,6 +1,7 @@
-import debbieImg from "../assets/img/debbie.PNG"
-import kimImg from "../assets/img/kim.PNG"
-import sandraImg from "../assets/img/sandra.PNG"
+import angeleImg from "../assets/img/angele.jpeg"
+import debbieImg from "../assets/img/debbie.png"
+import kimImg from "../assets/img/kim.png"
+import sandraImg from "../assets/img/sandra.png"
 import {
   IconCloudSolutions,
   IconMobileApp,
@@ -89,6 +90,11 @@ const sections = [
         img: debbieImg,
         name: "Debbie Bergstrom",
         role: ["Frontend", "Developer"],
+      },
+      {
+        img: angeleImg,
+        name: "Angele Perrot",
+        role: ["Graphic", "Designer"],
       },
     ],
   },

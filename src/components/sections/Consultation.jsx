@@ -63,7 +63,8 @@ function Consultation() {
         >
           <div className="group relative">
             <motion.div
-              className="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-[#e8d4b4] via-purple-500/30 to-[#e8d4b4] opacity-30 blur transition duration-1000 group-hover:opacity-50"
+              className="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-[#e8d4b4] via-purple-500/30
+                to-[#e8d4b4] opacity-30 blur transition duration-1000 group-hover:opacity-50"
               animate={{
                 backgroundPosition: isHovered
                   ? ["0% 50%", "100% 50%"]
@@ -77,7 +78,8 @@ function Consultation() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="w-full rounded-l-lg bg-white/5 px-6 py-4 text-white placeholder:text-white/50 focus:outline-none focus:ring-0"
+                className="w-full rounded-l-lg bg-white/5 px-6 py-4 text-white placeholder:text-white/50
+                  focus:outline-none focus:ring-0"
                 required
               />
               <motion.button
@@ -85,7 +87,8 @@ function Consultation() {
                 onHoverEnd={() => setIsHovered(false)}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="rounded-r-lg bg-[#e8d4b4] px-8 py-4 font-bold text-black transition-colors hover:bg-[#e8d4b4]/90"
+                className="rounded-r-lg bg-[#e8d4b4] px-8 py-4 font-bold text-black transition-colors
+                  hover:bg-[#e8d4b4]/90"
               >
                 Send
               </motion.button>

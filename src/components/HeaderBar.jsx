@@ -21,7 +21,8 @@ function HeaderBar({ isLoading }) {
         backgroundColor,
         backdropFilter: backdropBlur,
       }}
-      className="sm:h-26 fixed inset-x-0 top-0 z-40 h-24 border-b border-white/0 transition-colors duration-300 md:h-32"
+      className="sm:h-26 fixed inset-x-0 top-0 z-40 h-24 border-b border-white/0
+        transition-colors duration-300 md:h-32"
     >
       <AnimatePresence>
         {!isLoading && (
@@ -29,7 +30,8 @@ function HeaderBar({ isLoading }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 3.5 }}
-            className="content__container fixed left-20 top-[45px] sm:left-28 sm:top-[68px] md:left-36 md:top-[74px]"
+            className="content__container fixed left-20 top-[45px] sm:left-28 sm:top-[68px] md:left-36
+              md:top-[74px]"
           >
             <p className="content__container__text">[ We ]</p>
             <ul className="content__container__list">

@@ -8,7 +8,10 @@ import NavCircle from "../navigation/NavCircle"
 
 function Hero({ isLoading, onScrollNext, canScroll }) {
   return (
-    <section className="relative flex h-screen flex-col items-center justify-center px-4 pt-20 sm:px-6 md:px-10">
+    <section
+      className="relative flex h-screen flex-col items-center justify-center px-4 pt-20 sm:px-6
+        md:px-10"
+    >
       <HeaderBar />
       <Logo isLoading={isLoading} />
       <NavCircle canScroll={canScroll} />

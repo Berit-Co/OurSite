@@ -11,7 +11,7 @@ function Logo({ isLoading }) {
           isLoading
             ? "fixed inset-0 items-center justify-center"
             : "fixed left-4 top-4"
-        }`}
+          }`}
         animate={{
           scale: isLoading ? 1 : 0.45,
           x: 0,
@@ -88,7 +88,8 @@ function Logo({ isLoading }) {
               duration: 0.3,
               delay: isLoading ? 2.4 : 0,
             }}
-            className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-white/20 to-purple-500/10 blur-lg"
+            className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-white/20
+              to-purple-500/10 blur-lg"
           />
         </motion.div>
       </motion.div>

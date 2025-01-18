@@ -14,12 +14,12 @@ function NavCircle({ canScroll }) {
   return (
     <>
       <motion.button
-        className={`fixed right-4 top-4 z-[60] flex size-12 items-center justify-center rounded-full 
-                   bg-white/5 backdrop-blur-sm ${
-                     canScroll
-                       ? "cursor-pointer hover:bg-white/10"
-                       : "cursor-not-allowed opacity-50"
-                   } transition-colors`}
+        className={`fixed right-4 top-4 z-[60] flex size-12 items-center justify-center rounded-full
+          bg-white/5 backdrop-blur-sm ${
+          canScroll
+              ? "cursor-pointer hover:bg-white/10"
+              : "cursor-not-allowed opacity-50"
+          } transition-colors`}
         whileHover={{ scale: canScroll ? 1.1 : 1 }}
         whileTap={{ scale: canScroll ? 0.9 : 1 }}
         onClick={() => canScroll && setIsOpen(!isOpen)}
