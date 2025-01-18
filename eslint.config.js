@@ -1,11 +1,22 @@
-import js from "@eslint/js";
-import globals from "globals";
-import react from "eslint-plugin-react";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
+import path from "node:path"
+import { fileURLToPath } from "node:url"
+import { FlatCompat } from "@eslint/eslintrc"
+import js from "@eslint/js"
+import react from "eslint-plugin-react"
+import reactHooks from "eslint-plugin-react-hooks"
+import reactRefresh from "eslint-plugin-react-refresh"
+import globals from "globals"
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+  recommendedConfig: js.configs.recommended,
+})
 
 export default [
   { ignores: ["dist"] },
+  ...compat.extends("plugin:tailwindcss/recommended"),
   {
     files: ["**/*.{js,jsx}"],
     languageOptions: {
@@ -17,7 +28,12 @@ export default [
         sourceType: "module",
       },
     },
-    settings: { react: { version: "18.3" } },
+    settings: {
+      react: { version: "18.3" },
+      tailwindcss: {
+        config: "tailwind.config.js",
+      },
+    },
     plugins: {
       react,
       "react-hooks": reactHooks,
@@ -36,4 +52,4 @@ export default [
       ],
     },
   },
-];
+]

@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { navigationItems } from "./NavItems";
+import { motion } from "framer-motion"
+
+import { navigationItems } from "./NavItems"
 
 function NavDots({ activeSection, scrollToSection }) {
   return (
@@ -8,7 +9,7 @@ function NavDots({ activeSection, scrollToSection }) {
         <motion.div
           key={index}
           onClick={() => scrollToSection(index)}
-          className={`w-2 h-2 rounded-full mb-2 cursor-pointer ${
+          className={`mb-2 size-2 cursor-pointer rounded-full ${
             activeSection === index ? "bg-[#e8d4b4]" : "bg-white/30"
           }`}
           whileHover={{ scale: 1.5 }}
@@ -16,7 +17,7 @@ function NavDots({ activeSection, scrollToSection }) {
         />
       ))}
     </div>
-  );
+  )
 }
 
-export default NavDots;
+export default NavDots

@@ -71,8 +71,8 @@ Vi följer strikta gränser för import för att bibehålla en ren arkitektur:
 // Inom samma funktion
 
 // Från delade resurser
-import Pagination from "@/components/ui/Pagination";
-import { usePagination } from "@/hooks/usePagination";
+import Pagination from "@/components/ui/Pagination"
+import { usePagination } from "@/hooks/usePagination"
 ```
 
 ❌ Ogiltiga importeringar:
@@ -81,8 +81,8 @@ import { usePagination } from "@/hooks/usePagination";
 // Från annan funktionskategori
 
 // Från annan funktion i samma kategori
-import { GarageList } from "@/features/1.car-trading/garage/components/GarageList";
-import { MetricsChart } from "@/features/2.analytics/metrics/components/MetricsChart";
+import { GarageList } from "@/features/1.car-trading/garage/components/GarageList"
+import { MetricsChart } from "@/features/2.analytics/metrics/components/MetricsChart"
 ```
 
 ## Kodkvalitetsverktyg
@@ -185,13 +185,13 @@ Placera tester i lämpliga kataloger:
 ### Exempeltest
 
 ```javascript
-import { describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest"
 
 describe("Feature: [Name]", () => {
   it("should [expected behavior]", () => {
     // Testimplementation
-  });
-});
+  })
+})
 ```
 
 ## Felsökning

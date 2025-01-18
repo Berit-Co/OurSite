@@ -1,10 +1,10 @@
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"
 
 function AnimatedLine() {
   return (
-    <div className="w-full overflow-hidden mb-20">
+    <div className="mb-20 w-full overflow-hidden">
       <motion.div
-        className="h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent"
+        className="h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"
         initial={{ width: "0%" }}
         animate={{ width: "100%" }}
         transition={{
@@ -14,7 +14,7 @@ function AnimatedLine() {
         }}
       />
     </div>
-  );
+  )
 }
 
-export default AnimatedLine;
+export default AnimatedLine

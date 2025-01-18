@@ -1,15 +1,15 @@
-import { motion } from "framer-motion";
-import { useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useState } from "react"
+import emailjs from "@emailjs/browser"
+import { motion } from "framer-motion"
 
 function Consultation() {
-  const [email, setEmail] = useState("");
-  const [isHovered, setIsHovered] = useState(false);
-  const [status, setStatus] = useState("");
+  const [email, setEmail] = useState("")
+  const [isHovered, setIsHovered] = useState(false)
+  const [status, setStatus] = useState("")
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("sending");
+    e.preventDefault()
+    setStatus("sending")
 
     try {
       await emailjs.send(
@@ -21,29 +21,31 @@ function Consultation() {
           message: `Consultation request from: ${email}`,
         },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      );
+      )
 
-      setStatus("success");
-      setEmail("");
+      setStatus("success")
+      setEmail("")
     } catch (error) {
-      console.error("Error sending email:", error);
-      setStatus("error");
+      console.error("Error sending email:", error)
+      setStatus("error")
     }
-  };
+  }
 
   return (
-    <section className="h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="relative flex h-screen items-center justify-center overflow-hidden">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 max-w-2xl w-full px-4">
+        className="relative z-10 w-full max-w-2xl px-4"
+      >
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          className="mb-12 text-center"
+        >
+          <h2 className="mb-4 text-4xl font-bold md:text-5xl">
             We&lsquo;d Love to Hear From{" "}
             <span className="text-[#e8d4b4]">You.</span>
           </h2>
@@ -57,10 +59,11 @@ function Consultation() {
           className="relative"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.5 }}>
-          <div className="relative group">
+          transition={{ delay: 0.4, duration: 0.5 }}
+        >
+          <div className="group relative">
             <motion.div
-              className="absolute -inset-0.5 bg-gradient-to-r from-[#e8d4b4] via-purple-500/30 to-[#e8d4b4] rounded-lg blur opacity-30 group-hover:opacity-50 transition duration-1000"
+              className="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-[#e8d4b4] via-purple-500/30 to-[#e8d4b4] opacity-30 blur transition duration-1000 group-hover:opacity-50"
               animate={{
                 backgroundPosition: isHovered
                   ? ["0% 50%", "100% 50%"]
@@ -68,13 +71,13 @@ function Consultation() {
               }}
               transition={{ duration: 3, repeat: Infinity }}
             />
-            <div className="relative flex bg-black rounded-lg">
+            <div className="relative flex rounded-lg bg-black">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="w-full px-6 py-4 bg-white/5 rounded-l-lg focus:outline-none focus:ring-0 text-white placeholder-white/50"
+                className="w-full rounded-l-lg bg-white/5 px-6 py-4 text-white placeholder:text-white/50 focus:outline-none focus:ring-0"
                 required
               />
               <motion.button
@@ -82,13 +85,14 @@ function Consultation() {
                 onHoverEnd={() => setIsHovered(false)}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 py-4 bg-[#e8d4b4] text-black font-bold rounded-r-lg hover:bg-[#e8d4b4]/90 transition-colors">
+                className="rounded-r-lg bg-[#e8d4b4] px-8 py-4 font-bold text-black transition-colors hover:bg-[#e8d4b4]/90"
+              >
                 Send
               </motion.button>
             </div>
           </div>
           <div>
-            <p className="text-neutral-400 mt-2 px-2">
+            <p className="mt-2 px-2 text-neutral-400">
               Or just reach out manually to{" "}
               <span className="font-bold">business@beritco.com</span>
             </p>
@@ -98,12 +102,13 @@ function Consultation() {
 
       {/* Animated background elements */}
       <motion.div
-        className="absolute inset-0 pointer-events-none"
+        className="pointer-events-none absolute inset-0"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}>
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#e8d4b4]/10 rounded-full blur-3xl" />
+        transition={{ duration: 1 }}
+      >
+        <div className="absolute left-1/4 top-1/4 size-64 rounded-full bg-purple-500/10 blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 size-64 rounded-full bg-[#e8d4b4]/10 blur-3xl" />
       </motion.div>
 
       {status === "sending" && (
@@ -116,7 +121,7 @@ function Consultation() {
         <p className="mt-4 text-red-400">Något gick fel. Försök igen senare.</p>
       )}
     </section>
-  );
+  )
 }
 
-export default Consultation;
+export default Consultation

@@ -1,9 +1,9 @@
-import Hero from "./Hero";
-import Stats from "./Stats";
-import Services from "./Services";
-import Projects from "./Projects";
-import Pricing from "./Pricing";
-import Teams from "./Teams";
-import Consultation from "./Consultation";
+import Consultation from "./Consultation"
+import Hero from "./Hero"
+import Pricing from "./Pricing"
+import Projects from "./Projects"
+import Services from "./Services"
+import Stats from "./Stats"
+import Teams from "./Teams"
 
-export { Hero, Stats, Services, Projects, Pricing, Teams, Consultation };
+export { Hero, Stats, Services, Projects, Pricing, Teams, Consultation }

@@ -1,12 +1,12 @@
+import debbieImg from "../assets/img/debbie.PNG"
+import kimImg from "../assets/img/kim.PNG"
+import sandraImg from "../assets/img/sandra.PNG"
 import {
-  IconWebDevelopment,
+  IconCloudSolutions,
   IconMobileApp,
   IconUiUx,
-  IconCloudSolutions,
-} from "../components/ui/icons";
-import sandraImg from "../assets/img/sandra.PNG";
-import kimImg from "../assets/img/kim.PNG";
-import debbieImg from "../assets/img/debbie.PNG";
+  IconWebDevelopment,
+} from "../components/ui/icons"
 
 const sections = [
   {
@@ -92,6 +92,6 @@ const sections = [
       },
     ],
   },
-];
+]
 
-export default sections;
+export default sections

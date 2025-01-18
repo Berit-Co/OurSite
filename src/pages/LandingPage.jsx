@@ -1,123 +1,125 @@
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import Footer from "../components/Footer";
-import infoData from "../utils/infoData";
+import { useEffect, useState } from "react"
+import { motion } from "framer-motion"
+
+import Footer from "../components/Footer"
+import NavDots from "../components/navigation/NavDots"
+import { getNavigationIds } from "../components/navigation/NavItems"
 import {
-  Hero,
-  Stats,
-  Services,
-  Projects,
-  Pricing,
-  Teams,
   Consultation,
-} from "../components/sections";
-import NavDots from "../components/navigation/NavDots";
-import { getNavigationIds } from "../components/navigation/NavItems";
+  Hero,
+  Pricing,
+  Projects,
+  Services,
+  Stats,
+  Teams,
+} from "../components/sections"
+import infoData from "../utils/infoData"
 
 function LandingPage() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [canScroll, setCanScroll] = useState(false);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [activeSection, setActiveSection] = useState(0);
+  const [isLoading, setIsLoading] = useState(true)
+  const [canScroll, setCanScroll] = useState(false)
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [activeSection, setActiveSection] = useState(0)
 
   // Loading effect
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 4000); // Vänta på loading animation
+      setIsLoading(false)
+    }, 4000) // Vänta på loading animation
 
     const textTimer = setTimeout(() => {
-      setCanScroll(true);
-    }, 7000); // Vänta tills text animation är klar (4s + 3s för text)
+      setCanScroll(true)
+    }, 7000) // Vänta tills text animation är klar (4s + 3s för text)
 
     return () => {
-      clearTimeout(timer);
-      clearTimeout(textTimer);
-    };
-  }, []);
+      clearTimeout(timer)
+      clearTimeout(textTimer)
+    }
+  }, [])
 
   // Prevent scroll when loading or text animating
   useEffect(() => {
     const preventScroll = (e) => {
       if (!canScroll) {
-        e.preventDefault();
-        e.stopPropagation();
-        return false;
+        e.preventDefault()
+        e.stopPropagation()
+        return false
       }
-    };
+    }
 
     if (!canScroll) {
-      document.addEventListener("wheel", preventScroll, { passive: false });
-      document.addEventListener("touchmove", preventScroll, { passive: false });
+      document.addEventListener("wheel", preventScroll, { passive: false })
+      document.addEventListener("touchmove", preventScroll, { passive: false })
     }
 
     return () => {
-      document.removeEventListener("wheel", preventScroll);
-      document.removeEventListener("touchmove", preventScroll);
-    };
-  }, [canScroll]);
+      document.removeEventListener("wheel", preventScroll)
+      document.removeEventListener("touchmove", preventScroll)
+    }
+  }, [canScroll])
 
   // Mouse move handler
   const handleMouseMove = (e) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
-  };
+    setMousePosition({ x: e.clientX, y: e.clientY })
+  }
 
   // Scroll section handler
   const scrollToSection = (index) => {
-    const sectionIds = getNavigationIds();
-    const sectionId = sectionIds[index];
-    const element = document.getElementById(sectionId);
+    const sectionIds = getNavigationIds()
+    const sectionId = sectionIds[index]
+    const element = document.getElementById(sectionId)
 
     if (element) {
-      const offset = element.offsetTop;
+      const offset = element.offsetTop
       window.scrollTo({
         top: offset,
         behavior: "smooth",
-      });
+      })
     }
-  };
+  }
 
   const scrollToNextSection = () => {
     window.scrollTo({
       top: window.innerHeight,
       behavior: "smooth",
-    });
-  };
+    })
+  }
 
   // Scroll spy effect
   useEffect(() => {
     const handleScroll = () => {
-      const position = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const active = Math.round(position / windowHeight);
-      setActiveSection(active);
-    };
+      const position = window.scrollY
+      const windowHeight = window.innerHeight
+      const active = Math.round(position / windowHeight)
+      setActiveSection(active)
+    }
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   // Data for sections
-  const sections = infoData;
+  const sections = infoData
 
   const statsData = sections[0].stats.map((stat) => {
-    const number = parseInt(stat.number.replace(/[%+]/g, ""));
-    const suffix = stat.number.match(/[%+]/g)?.[0] || "";
+    const number = parseInt(stat.number.replace(/[%+]/g, ""))
+    const suffix = stat.number.match(/[%+]/g)?.[0] || ""
 
     return {
       number,
       label: stat.label,
       suffix,
-    };
-  });
+    }
+  })
 
   return (
     <div
       onMouseMove={handleMouseMove}
-      className="bg-black text-white overflow-x-hidden">
+      className="overflow-x-hidden bg-black text-white"
+    >
       {/* Floating Gradient Orb */}
       <motion.div
-        className="fixed w-[500px] h-[500px] rounded-full blur-[100px] pointer-events-none"
+        className="pointer-events-none fixed size-[500px] rounded-full blur-[100px]"
         animate={{
           x: mousePosition.x - 250,
           y: mousePosition.y - 250,
@@ -165,7 +167,7 @@ function LandingPage() {
         scrollToSection={scrollToSection}
       />
     </div>
-  );
+  )
 }
 
-export default LandingPage;
+export default LandingPage

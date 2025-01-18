@@ -6,6 +6,6 @@ export const navigationItems = [
   { id: "pricing", title: "Pricing" },
   { id: "team", title: "Team" },
   { id: "consultation", title: "Contact" },
-];
+]
 
-export const getNavigationIds = () => navigationItems.map((item) => item.id);
+export const getNavigationIds = () => navigationItems.map((item) => item.id)
