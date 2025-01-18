@@ -34,11 +34,15 @@ export default defineConfig({
     minify: "esbuild",
     target: "es2020",
     cssMinify: true,
+    assetsDir: "assets",
     rollupOptions: {
       input: {
         main: fileURLToPath(new URL("./index.html", import.meta.url)),
       },
       output: {
+        manualChunks: {
+          vendor: ["react", "react-dom", "framer-motion"],
+        },
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name.split(".")
           const ext = info[info.length - 1]
@@ -47,6 +51,8 @@ export default defineConfig({
           }
           return `assets/[name]-[hash][extname]`
         },
+        entryFileNames: "assets/[name]-[hash].js",
+        chunkFileNames: "assets/[name]-[hash].js",
       },
     },
   },
