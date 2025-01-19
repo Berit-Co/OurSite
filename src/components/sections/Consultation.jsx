@@ -49,7 +49,7 @@ function Consultation() {
             We&lsquo;d Love to Hear From{" "}
             <span className="text-[#e8d4b4]">You.</span>
           </h2>
-          <p className="text-xl text-neutral-400">
+          <p className="text-base text-neutral-400 sm:text-xl">
             Book a free Consultation now!
           </p>
         </motion.div>
@@ -64,7 +64,8 @@ function Consultation() {
           <div className="group relative">
             <motion.div
               className="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-[#e8d4b4] via-purple-500/30
-                to-[#e8d4b4] opacity-30 blur transition duration-1000 group-hover:opacity-50"
+                to-[#e8d4b4] opacity-30 blur transition duration-1000 group-hover:opacity-50 max-sm:inset-[0.15rem]
+                sm:-inset-0.5"
               animate={{
                 backgroundPosition: isHovered
                   ? ["0% 50%", "100% 50%"]
@@ -95,7 +96,7 @@ function Consultation() {
             </div>
           </div>
           <div>
-            <p className="mt-2 px-2 text-neutral-400">
+            <p className="mt-2 px-2 text-sm text-neutral-400">
               Or just reach out manually to{" "}
               <span className="font-bold">business@beritco.com</span>
             </p>
@@ -105,7 +106,7 @@ function Consultation() {
 
       {/* Animated background elements */}
       <motion.div
-        className="pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute inset-0 z-[1]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}

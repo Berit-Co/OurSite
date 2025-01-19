@@ -8,3 +8,10 @@
     font-family: "Aeonik", system-ui, sans-serif;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .mobile-hero-padding {
+    padding-top: 0;
+    padding-bottom: 4rem;
+  }
+}

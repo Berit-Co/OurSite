@@ -11,7 +11,7 @@ function Logo({ isLoading }) {
           isLoading
             ? "fixed inset-0 items-center justify-center"
             : "fixed left-4 top-4"
-          }`}
+        }`}
         animate={{
           scale: isLoading ? 1 : 0.45,
           x: 0,
@@ -64,11 +64,14 @@ function Logo({ isLoading }) {
           >
             <motion.span
               animate={{
-                textShadow: [
-                  "0 0 15px rgba(255,255,255,0.3)",
-                  "0 0 25px rgba(255,255,255,0.5)",
-                  "0 0 15px rgba(255,255,255,0.3)",
-                ],
+                textShadow:
+                  window.innerWidth >= 640
+                    ? [
+                        "0 0 15px rgba(255,255,255,0.3)",
+                        "0 0 25px rgba(255,255,255,0.5)",
+                        "0 0 15px rgba(255,255,255,0.3)",
+                      ]
+                    : "0 0 15px rgba(255,255,255,0.3)",
               }}
               transition={{
                 duration: 2,

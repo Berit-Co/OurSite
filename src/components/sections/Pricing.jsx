@@ -1,5 +1,5 @@
-import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
 
 function Pricing({ plans }) {
   const [currentIndex, setCurrentIndex] = useState(1)
@@ -43,7 +43,7 @@ function Pricing({ plans }) {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               className={`w-[320px] rounded-xl p-8 backdrop-blur-sm ${
-              plan.highlight
+                plan.highlight
                   ? "border border-[#e8d4b4]/30 bg-[#e8d4b4]/20"
                   : "bg-white/5"
               }`}
@@ -68,7 +68,7 @@ function Pricing({ plans }) {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 className={`mt-8 w-full rounded-lg py-3 ${
-                plan.highlight
+                  plan.highlight
                     ? "bg-[#e8d4b4] text-black"
                     : "bg-white/10 hover:bg-white/20"
                 }`}
@@ -84,8 +84,8 @@ function Pricing({ plans }) {
 
   return (
     <section
-      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden
-        py-16"
+      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden py-24
+  sm:py-16"
     >
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -122,7 +122,7 @@ function Pricing({ plans }) {
                   }}
                   transition={{ duration: 0.3 }}
                   className={`absolute left-0 top-0 w-full rounded-xl p-5 sm:p-6 ${
-                  plan.highlight
+                    plan.highlight
                       ? "border border-[#e8d4b4]/30 bg-[#e8d4b4]/20"
                       : "bg-white/5"
                   }`}
@@ -151,7 +151,7 @@ function Pricing({ plans }) {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     className={`mt-6 w-full rounded-lg py-2.5 text-sm sm:mt-8 sm:py-3 sm:text-base ${
-                    plan.highlight
+                      plan.highlight
                         ? "bg-[#e8d4b4] text-black"
                         : "bg-white/10 hover:bg-white/20"
                     }`}
@@ -169,7 +169,8 @@ function Pricing({ plans }) {
             <motion.div
               key={index}
               className={`size-2 cursor-pointer rounded-full sm:size-2.5 ${
-              currentIndex === index ? "bg-[#e8d4b4]" : "bg-white/30" }`}
+                currentIndex === index ? "bg-[#e8d4b4]" : "bg-white/30"
+              }`}
               onClick={() => setCurrentIndex(index)}
               whileHover={{ scale: 1.5 }}
               transition={{ duration: 0.2 }}

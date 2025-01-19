@@ -5,10 +5,11 @@ function Services({ services }) {
   const isTablet = window.innerWidth >= 640 && window.innerWidth < 1024
 
   return (
-    <section className="relative flex h-screen items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden py-24 sm:py-0">
       <div
-        className={`absolute ${isMobile ? "right-4" : "right-[calc(50%+20rem)]"} top-1/2 flex
-          -translate-y-1/2 items-center gap-8 lg:right-[calc(50%+24rem)]`}
+        className={`absolute ${
+          isMobile ? "left-1 top-[55%]" : "right-[calc(50%+20rem)] top-1/2"
+        } flex -translate-y-1/2 items-center gap-8 lg:right-[calc(50%+24rem)]`}
       >
         <motion.div
           initial={{ height: 0 }}
@@ -26,8 +27,9 @@ function Services({ services }) {
           }}
         >
           <h2
-            className={`font-bold tracking-widest text-neutral-800 ${ isMobile ? "text-4xl" : "text-6xl"
-              }`}
+            className={`font-bold tracking-widest text-neutral-800 ${
+              isMobile ? "text-5xl" : "text-6xl"
+            }`}
           >
             WHAT WE DO
           </h2>
@@ -36,7 +38,8 @@ function Services({ services }) {
 
       <div
         className={`grid ${isMobile ? "grid-cols-1" : "grid-cols-2"} gap-4 md:gap-6 lg:gap-8 ${
-          isMobile ? "mt-24 max-w-[90%]" : isTablet ? "max-w-2xl" : "max-w-4xl" }`}
+          isMobile ? "mt-24 max-w-[90%]" : isTablet ? "max-w-2xl" : "max-w-4xl"
+        }`}
       >
         {services.map((service) => (
           <motion.div

@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 
 function Team({ members }) {
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center py-16">
+    <section className="relative flex min-h-screen flex-col items-center justify-center py-24 sm:py-16">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}

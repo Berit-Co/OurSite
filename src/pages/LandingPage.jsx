@@ -88,10 +88,34 @@ function LandingPage() {
   // Scroll spy effect
   useEffect(() => {
     const handleScroll = () => {
-      const position = window.scrollY
-      const windowHeight = window.innerHeight
-      const active = Math.round(position / windowHeight)
-      setActiveSection(active)
+      const sections = Array.from(
+        document.querySelectorAll("section[id]")
+      ).filter((section) => section.id !== "footer")
+
+      const scrollPosition = window.scrollY + window.innerHeight / 2
+      const viewportHeight = window.innerHeight
+      const documentHeight = document.documentElement.scrollHeight
+
+      // Särskild hantering för sista sektionen
+      if (scrollPosition + viewportHeight >= documentHeight) {
+        setActiveSection(sections.length - 1)
+        return
+      }
+
+      let activeIndex = 0
+      sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop
+        const sectionHeight = section.offsetHeight
+
+        if (
+          scrollPosition >= sectionTop &&
+          scrollPosition < sectionTop + sectionHeight
+        ) {
+          activeIndex = index
+        }
+      })
+
+      setActiveSection(activeIndex)
     }
 
     window.addEventListener("scroll", handleScroll)
