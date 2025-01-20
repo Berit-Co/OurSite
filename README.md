@@ -95,6 +95,14 @@ src/
 }
 ```
 
+### Stylelint
+
+- Följer `stylelint-config-standard`
+- Använder kebab-case för klassnamn
+- Tillåter Tailwind-specifika direktiv
+- Automatisk formatering vid commit
+- Validerar CSS-syntax och best practices
+
 ### Produktionsåtgärder
 
 - Console.log-uttalanden tas automatiskt bort i produktion genom att ha `drop_console: true` i vite.config.js
