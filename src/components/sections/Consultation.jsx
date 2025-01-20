@@ -64,7 +64,7 @@ function Consultation() {
           <div className="group relative">
             <motion.div
               className="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-[#e8d4b4] via-purple-500/30
-                to-[#e8d4b4] opacity-30 blur transition duration-1000 group-hover:opacity-50 max-sm:inset-[0.15rem]
+                to-[#e8d4b4] opacity-30 blur transition duration-1000 group-hover:opacity-50 max-sm:-inset-1
                 sm:-inset-0.5"
               animate={{
                 backgroundPosition: isHovered

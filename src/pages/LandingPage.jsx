@@ -5,7 +5,9 @@ import Footer from "../components/Footer"
 import NavDots from "../components/navigation/NavDots"
 import { getNavigationIds } from "../components/navigation/NavItems"
 import {
+  About,
   Consultation,
+  FAQ,
   Hero,
   Pricing,
   Projects,
@@ -166,17 +168,23 @@ function LandingPage() {
         <section id="stats">
           <Stats stats={statsData} />
         </section>
+        <section id="about">
+          <About about={sections[1].about} />
+        </section>
         <section id="services">
-          <Services services={sections[1].services} />
+          <Services services={sections[2].services} />
         </section>
         <section id="projects">
-          <Projects projects={sections[2].projects} />
+          <Projects projects={sections[3].projects} />
         </section>
         <section id="pricing">
-          <Pricing plans={sections[3].plans} />
+          <Pricing plans={sections[4].plans} />
+        </section>
+        <section id="faq">
+          <FAQ faqs={sections[5].faqs} />
         </section>
         <section id="team">
-          <Teams members={sections[4].members} />
+          <Teams members={sections[6].members} />
         </section>
         <section id="consultation">
           <Consultation />

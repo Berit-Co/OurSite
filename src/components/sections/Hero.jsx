@@ -28,7 +28,7 @@ function Hero({ isLoading, onScrollNext, canScroll }) {
                 duration: 0.8,
                 delay: 2.3,
               }}
-              className="mt-20 w-full sm:mt-0 sm:w-3/4 md:w-1/2"
+              className="mt-16 w-full sm:mt-0 sm:w-3/4 md:w-1/2"
             >
               <div className="flex flex-col gap-2 sm:gap-4">
                 <div className="flex flex-col items-start sm:flex-row sm:items-baseline sm:gap-6">

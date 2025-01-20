@@ -80,7 +80,7 @@ function Logo({ isLoading }) {
               }}
               className="relative z-10"
             >
-              & Co
+              &Co
             </motion.span>
           </motion.div>
           {/* Permanent subtle glow - visas alltid */}

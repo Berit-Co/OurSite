@@ -10,7 +10,7 @@ function IconWebDevelopment() {
       whileHover={{ scale: 1.1 }}
     >
       <motion.path
-        d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h10v2H7V7zm0 4h10v2H7v-2zm0 4h6v2H7v-2z"
+        d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-9.25 12l-2.75-3 2.75-3h1.5l-2.75 3 2.75 3h-1.5zM15 16h-1.5l2.75-3-2.75-3H15l2.75 3L15 16z"
         fill="currentColor"
         initial={{ pathLength: 0 }}
         animate={{ pathLength: 1 }}

@@ -6,17 +6,25 @@ import { navigationItems } from "./NavItems"
 function NavCircle({ canScroll }) {
   const [isOpen, setIsOpen] = useState(false)
 
-  const menuItems = navigationItems.map((item) => ({
-    title: item.title,
-    href: `#${item.id}`,
-  }))
+  const menuItems = navigationItems
+    .map((item) => ({
+      title: item.title,
+      href: `#${item.id}`,
+    }))
+    .filter(
+      (item) =>
+        item.title !== "About" &&
+        item.title !== "FAQ" &&
+        item.title !== "Stats" &&
+        item.title !== "Team"
+    )
 
   return (
     <>
       <motion.button
         className={`fixed right-4 top-4 z-[60] flex size-12 items-center justify-center rounded-full
           bg-white/5 backdrop-blur-sm ${
-          canScroll
+            canScroll
               ? "cursor-pointer hover:bg-white/10"
               : "cursor-not-allowed opacity-50"
           } transition-colors`}

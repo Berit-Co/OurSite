@@ -1,15 +1,28 @@
-@import "./fonts.css";
+@import url("./fonts.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  body {
+    overscroll-behavior-y: contain;
+    touch-action: pan-y;
+  }
+
   html {
-    font-family: "Aeonik", system-ui, sans-serif;
+    font-family: Aeonik, system-ui, sans-serif;
   }
 }
 
-@media screen and (max-width: 640px) {
+@layer base {
+  .fixed {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+}
+
+@media screen and (width <= 640px) {
   .mobile-hero-padding {
     padding-top: 0;
     padding-bottom: 4rem;

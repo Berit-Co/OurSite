@@ -13,37 +13,60 @@ function Projects({ projects }) {
             className="absolute -left-4 -top-4 -z-10 size-24 rounded-full bg-[#e8d4b4]/10 blur-2xl"
           />
 
-          {/* Dekorativ linje */}
-          <motion.div
-            initial={{ pathLength: 0 }}
-            whileInView={{ pathLength: 1 }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
-            className="absolute -bottom-8 left-0 h-24 w-full"
-          >
-            <svg className="size-full">
-              <motion.path
-                d="M 0 0 L 200 0 L 200 80 L 195 75 M 200 80 L 205 75"
-                fill="transparent"
-                stroke="#e8d4b4"
-                strokeWidth="2"
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
-              />
-            </svg>
-          </motion.div>
+          {/* Modern Stack presentation */}
+          <div className="relative">
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: "100%" }}
+              transition={{ duration: 0.8 }}
+              className="h-[2px] bg-gradient-to-r from-[#e8d4b4] to-transparent"
+            />
 
-          {/* Stack text med glow effekt */}
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="relative text-6xl font-bold tracking-tight md:text-7xl"
-          >
-            <span className="bg-gradient-to-r from-white to-[#e8d4b4] bg-clip-text text-transparent">
-              Stack
-            </span>
-          </motion.h2>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="my-8 flex flex-wrap gap-4"
+            >
+              {["React", "Node.js", "MongoDB", "Django", "Python"].map(
+                (tech, index) => (
+                  <motion.div
+                    key={tech}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    whileHover={{ scale: 1.05, y: -5 }}
+                    transition={{
+                      duration: 0.3,
+                      delay: index * 0.1,
+                      type: "spring",
+                      stiffness: 300,
+                    }}
+                    className="group relative cursor-pointer rounded-lg bg-white/5 px-6 py-3 backdrop-blur-sm"
+                  >
+                    <span className="relative z-10 text-lg font-medium">
+                      {tech}
+                    </span>
+                    <motion.div
+                      className="absolute inset-0 -z-10 rounded-lg bg-[#e8d4b4]/10"
+                      initial={{ scale: 0 }}
+                      whileHover={{ scale: 1 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 20,
+                      }}
+                    />
+                  </motion.div>
+                )
+              )}
+            </motion.div>
+
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: "100%" }}
+              transition={{ duration: 0.8 }}
+              className="h-[2px] bg-gradient-to-l from-[#e8d4b4] to-transparent"
+            />
+          </div>
         </div>
 
         {/* Project cards med staggered animation */}

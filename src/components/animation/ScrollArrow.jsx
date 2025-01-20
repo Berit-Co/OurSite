@@ -6,7 +6,7 @@ function ScrollArrow({ onClick }) {
   return (
     <motion.div
       onClick={onClick}
-      className="absolute bottom-10 cursor-pointer"
+      className="absolute bottom-24 cursor-pointer sm:bottom-10"
       animate={{
         y: [0, 10, 0],
       }}
