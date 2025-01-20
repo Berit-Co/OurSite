@@ -27,7 +27,7 @@ function FAQItem({ question, answer, index, isOpen, onToggle }) {
             <span className="text-sm text-[#e8d4b4]">
               {String(index + 1).padStart(2, "0")}
             </span>
-            <span className="text-base font-medium sm:text-3xl md:text-4xl">
+            <span className="text-base font-medium sm:text-xl md:text-xl">
               {question}
             </span>
           </span>
