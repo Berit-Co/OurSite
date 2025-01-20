@@ -187,20 +187,20 @@ import { useState, useEffect } from "react";
 // 2. Externa bibliotek
 import { QueryClient } from "@tanstack/react-query";
 
-// 3. Delade komponenter (@/components)
-import Pagination from "@/components/ui/Pagination";
-import Modal from "@/components/Modal";
+// 3. Komponenter (@/components)
+import HeaderBar from "@/components/HeaderBar";
+import Footer from "@/components/Footer";
 
 // 4. Delade krokar (@/hooks)
 import { usePagination } from "@/hooks/usePagination";
 
 // 5. Funktionsspecifika importeringar
-import CarList from "./components/CarList";
-import { carList } from "./utils/dummyCarList";
+import Navitems from "./components/Navitems";
+import { Navitems } from "./utils/Navitems";
 
 // 6. Typer och konstanter
-import { ROUTES } from "@/utils/constants";
-import type { Car } from "@/types";
+import { infoData } from "@/utils/infoData";
+import type { sections } from "@/types";
 ```
 
 ### Automatisk formatering
