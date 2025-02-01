@@ -6,7 +6,8 @@ import Pricing from "./Pricing"
 import Projects from "./Projects"
 import Services from "./Services"
 import Stats from "./Stats"
-import Teams from "./Teams"
+
+//import Teams from "./Teams"
 
 export {
   About,
@@ -17,5 +18,5 @@ export {
   Projects,
   Services,
   Stats,
-  Teams,
+  //Teams,
 }

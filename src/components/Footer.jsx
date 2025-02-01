@@ -9,7 +9,7 @@ function Footer() {
     { icon: <FaGithub />, url: "https://github.com/Berit-Co" },
     { icon: <FaLinkedin />, url: "https://linkedin.com/in/your-profile" },
     { icon: <FaTwitter />, url: "https://twitter.com/your-twitter" },
-    { icon: <HiMail />, url: "mailto:Bergstrom_sandra@hotmail.com" },
+    { icon: <HiMail />, url: "mailto:info@beritco.com" },
   ]
 
   const footerLinks = navigationItems.filter((item) =>
