@@ -17,10 +17,12 @@ const sections = [
   {
     about: {
       badge: "Om oss",
-      title: "Vår Resa, Vision och Värderingar",
+      title: "BerIT & Company - Visioner & Värderingar",
       description: [
-        "Vi är ett familjeägt företag som sätter kunden i centrum. Med vårt personliga tillvägagångssätt och hängivenhet till kvalitet bygger vi långsiktiga partnerskap.",
-        "Vår styrka ligger i att kombinera teknisk expertis med en genuin förståelse för våra kunders behov, vilket gör varje projekt till en gemensam resa mot framgång.",
+        "På BerIT & Company är vi mer än bara ett webbutvecklingsteam – vi är en familj. Företagsnamnet BerIT kommer från vårt efternamn, Bergström, kombinerat med vår passion för IT. Vi är tre syskon med olika bakgrund och specialområden inom webb och design, vilket gör att vi kompletterar varandra perfekt.",
+        "Vår styrka ligger i denna mångfald, där varje projekt får en genomtänkt och balanserad approach. Vi strävar efter att skapa inkluderande och tillgängliga digitala lösningar som följer de senaste standarderna, såsom WCAG 2.2. Med den kommande lagen om tillgänglighet till digital offentlig service, som träder i kraft den 28 juni 2025, är det viktigare än någonsin att säkerställa att webbplatser är tillgängliga för alla.",
+        "Samtidigt som vi utgör kärnan i BerIT & Company, samarbetar vi även med andra konsulter vid behov, vilket ger oss en oändlig kompetens för att möta alla utmaningar. Vår vision är att växa till ett kraftfullt digitalt verktyg med obegränsade möjligheter – där ingenting är omöjligt att skapa.",
+        "Låt oss bygga något fantastiskt tillsammans!",
       ],
       rating: {
         stars: "5 Stjärnor",
