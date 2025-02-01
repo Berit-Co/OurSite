@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion"
 
+import heroImage from "../../assets/img/hero.webp"
 import AnimatedLine from "../animation/AnimatedLine"
 import Logo from "../animation/Logo"
 import ScrollArrow from "../animation/ScrollArrow"
@@ -12,6 +13,15 @@ function Hero({ isLoading, onScrollNext, canScroll }) {
       className="mobile-hero-padding relative flex h-screen flex-col items-center justify-center 
         px-4 pt-20 sm:px-6 sm:pt-0 md:px-10"
     >
+      <div className="absolute left-1/2 top-1/2 z-0 h-screen w-screen -translate-x-1/2 -translate-y-1/2 opacity-10">
+        <img
+          src={heroImage}
+          alt="Hero background"
+          className="size-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/40" />
+      </div>
+
       <HeaderBar />
       <Logo />
       <NavCircle canScroll={canScroll} />
