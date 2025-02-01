@@ -22,7 +22,12 @@ function Hero({ isLoading, onScrollNext, canScroll }) {
             <AnimatedLine />
 
             <div className="mt-16 w-full sm:mt-0 sm:w-3/4 md:w-1/2">
-              <div className="flex flex-col gap-2 sm:gap-4">
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="flex flex-col gap-2 sm:gap-4"
+              >
                 <div className="flex flex-col items-start sm:flex-row sm:items-baseline sm:gap-6">
                   <h1 className="text-4xl font-bold sm:text-5xl md:text-7xl">
                     We
@@ -62,7 +67,7 @@ function Hero({ isLoading, onScrollNext, canScroll }) {
                     Solutions
                   </h1>
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             <ScrollArrow onClick={onScrollNext} />
