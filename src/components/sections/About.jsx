@@ -52,9 +52,23 @@ function About({ about }) {
                   layout
                   className="space-y-4 text-base text-neutral-400 sm:text-lg md:text-xl"
                 >
-                  <p>{about.description[0]}</p>
+                  <p>
+                    At BerIT & Company, we&#39;re more than just a web
+                    development team—we&#39;re a family. Founded by three
+                    siblings, the name BerIT is a blend of our last name,
+                    Bergström, and our passion for IT. Each of us brings a
+                    unique skill set and a different perspective on web
+                    development and design, allowing us to complement each other
+                    perfectly.
+                  </p>
                   <p className={!isExpanded ? "line-clamp-1" : ""}>
-                    {about.description[1]}
+                    Our strength lies in this diversity, ensuring that every
+                    project receives a well-thought-out and balanced approach.
+                    We strive to create inclusive and accessible digital
+                    solutions that adhere to the latest standards, such as WCAG
+                    2.2. With the upcoming Digital Accessibility Act, coming
+                    into effect on June 28, 2025, it is more important than ever
+                    to ensure that websites are accessible to everyone.
                   </p>
                 </motion.div>
 
@@ -67,8 +81,15 @@ function About({ about }) {
                       transition={{ duration: 0.3 }}
                       className="space-y-4 pt-8 text-base text-neutral-400 sm:text-lg md:text-xl"
                     >
-                      <p>{about.description[2]}</p>
-                      <p>{about.description[3]}</p>
+                      <p>
+                        While we are at the core of BerIT & Company, we also
+                        collaborate with talented consultants when needed,
+                        expanding our expertise to meet any challenge. Our
+                        vision is to grow into a powerful digital tool with
+                        unlimited possibilities—so that nothing is impossible to
+                        create.
+                      </p>
+                      <p>Let&#39;s build something great together!</p>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -80,7 +101,7 @@ function About({ about }) {
                 onClick={() => setIsExpanded(!isExpanded)}
                 className="rounded-lg bg-[#e8d4b4]/10 px-6 py-3 text-[#e8d4b4] transition-colors hover:bg-[#e8d4b4]/20"
               >
-                {isExpanded ? "Visa mindre" : "Läs mer"}
+                {isExpanded ? "Show less" : "Read more"}
               </motion.button>
             </div>
           </div>

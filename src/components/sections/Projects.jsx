@@ -31,7 +31,7 @@ function Projects() {
           className="mb-12"
         >
           <h2 className="mb-8 text-4xl font-bold md:text-5xl">
-            Din digitala närvaro börjar med en stark hemsida
+            Your Digital Presence Starts with a Powerful Website
           </h2>
 
           <motion.div layout className="relative overflow-hidden">
@@ -40,22 +40,23 @@ function Projects() {
               className="space-y-4 text-base text-neutral-400 sm:text-lg md:text-xl"
             >
               <p>
-                De senaste åren har vi sett en kraftig ökning av företag som
-                väljer att enbart fokusera på sina sociala medieprofiler, och
-                många har valt att lägga mindre och mindre energi på sina
-                hemsidor. Det har blivit en trend att lägga tid och resurser på
-                content, inlägg och annonser på plattformar som Instagram,
-                Facebook och LinkedIn. Men här finns en risk: alla kunder
-                använder inte sociala medier. Många föredrar istället att söka
-                efter information direkt via en hemsida, där de kan hitta
-                prislistor, detaljerad information om företaget och specifika
-                tjänster.
+                Over the past few years, there has been a significant increase
+                in businesses choosing to focus solely on their social media
+                profiles, with many putting less and less effort into their
+                websites. It has become a trend to invest time and resources
+                into content, posts, and ads on platforms like Instagram,
+                Facebook, and LinkedIn. But there&#39;s a risk: not all
+                customers use social media. Many prefer to search for
+                information directly on a website, where they can find pricing
+                details, comprehensive company information, and specific
+                services.
               </p>
               <p className={!isExpanded ? "line-clamp-2" : ""}>
-                Även om sociala medier kan ge snabb synlighet, har de sina
-                begränsningar. Du äger inte ditt innehåll på dessa plattformar
-                och är beroende av deras algoritmer för att synas. På en hemsida
-                har du full kontroll över innehållet och hur det presenteras...
+                While social media can provide quick visibility, it has its
+                limitations. You don&#39;t own your content on these platforms
+                and are dependent on their algorithms to be seen. With a
+                website, you have full control over your content and how
+                it&#39;s presented...
               </p>
             </motion.div>
 
@@ -69,37 +70,38 @@ function Projects() {
                   className="space-y-4 text-base text-neutral-400 sm:text-lg md:text-xl"
                 >
                   <p>
-                    Även om sociala medier kan ge snabb synlighet, har de sina
-                    begränsningar. Du äger inte ditt innehåll på dessa
-                    plattformar och är beroende av deras algoritmer för att
-                    synas. På en hemsida har du full kontroll över innehållet
-                    och hur det presenteras. Dessutom, med en egen hemsida får
-                    du bättre möjligheter att synas på Google och andra
-                    sökmotorer, vilket gör det lättare för kunder att hitta dig.
+                    While social media can provide quick visibility, it has its
+                    limitations. You don&#39;t own your content on these
+                    platforms and are dependent on their algorithms to be seen.
+                    With a website, you have full control over your content and
+                    how it&#39;s presented. Additionally, having your own
+                    website improves your chances of appearing on Google and
+                    other search engines, making it easier for potential
+                    customers to find you.
                   </p>
                   <p>
-                    En annan stor fördel med en hemsida är att den ger ett mer
-                    professionellt intryck och ger kunderna förtroende. Sociala
-                    medieprofiler kan ibland kännas mer informella och
-                    transienta, medan en väldesignad hemsida visar att ditt
-                    företag är seriöst och långsiktigt. Du kan även lägga upp
-                    detaljerad information, som prislistor och tjänster, på ett
-                    sätt som är svårt att få fram på sociala plattformar.
+                    Another key advantage of a website is that it creates a more
+                    professional impression and builds trust with customers.
+                    Social media profiles can sometimes feel more informal and
+                    fleeting, whereas a well-designed website signals that your
+                    business is serious and built for the long term. You can
+                    also display detailed information, such as pricing and
+                    services, in a structured way that&#39;s hard to achieve on
+                    social media platforms.
                   </p>
                   <p>
-                    Slutligen handlar det också om trygghet. När du har en
-                    hemsida, har du kontroll över din egen närvaro online och
-                    kan skapa en stabil grund för din digitala marknadsföring,
-                    utan att vara beroende av externa plattformar som kan ändra
-                    sina regler eller algoritmer.
+                    Finally, it&#39;s about security. When you have a website,
+                    you control your own online presence and can build a stable
+                    foundation for your digital marketing—without relying on
+                    external platforms that can change their rules or algorithms
+                    at any time.
                   </p>
                   <p>
-                    Att bara satsa på sociala medier räcker inte för att bygga
-                    ett hållbart och pålitligt online-varumärke. En
-                    professionell hemsida ger inte bara ökad synlighet och
-                    trovärdighet – den gör också att du kan ge kunderna all
-                    information de söker, på ett ställe de känner sig trygga
-                    med.
+                    Relying solely on social media isn&#39;t enough to build a
+                    sustainable and trustworthy online brand. A professional
+                    website doesn&#39;t just enhance visibility and
+                    credibility—it ensures that customers can find all the
+                    information they need, in a place they trust.
                   </p>
                 </motion.div>
               )}
@@ -112,7 +114,7 @@ function Projects() {
             onClick={handleToggle}
             className="mt-6 rounded-lg bg-[#e8d4b4]/10 px-6 py-3 text-[#e8d4b4] transition-colors hover:bg-[#e8d4b4]/20"
           >
-            {isExpanded ? "Visa mindre" : "Läs mer"}
+            {isExpanded ? "Show less" : "Read more"}
           </motion.button>
         </motion.div>
       </motion.div>
