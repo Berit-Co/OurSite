@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion"
 
+import heroImage from "../../assets/img/hero.webp"
 import AnimatedLine from "../animation/AnimatedLine"
 import Logo from "../animation/Logo"
 import ScrollArrow from "../animation/ScrollArrow"
@@ -12,6 +13,15 @@ function Hero({ isLoading, onScrollNext, canScroll }) {
       className="mobile-hero-padding relative flex h-screen flex-col items-center justify-center 
         px-4 pt-20 sm:px-6 sm:pt-0 md:px-10"
     >
+      <div className="absolute left-1/2 top-1/2 z-0 h-screen w-screen -translate-x-1/2 -translate-y-1/2 opacity-10">
+        <img
+          src={heroImage}
+          alt="Hero background"
+          className="size-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/40" />
+      </div>
+
       <HeaderBar />
       <Logo />
       <NavCircle canScroll={canScroll} />
@@ -22,7 +32,12 @@ function Hero({ isLoading, onScrollNext, canScroll }) {
             <AnimatedLine />
 
             <div className="mt-16 w-full sm:mt-0 sm:w-3/4 md:w-1/2">
-              <div className="flex flex-col gap-2 sm:gap-4">
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="flex flex-col gap-2 sm:gap-4"
+              >
                 <div className="flex flex-col items-start sm:flex-row sm:items-baseline sm:gap-6">
                   <h1 className="text-4xl font-bold sm:text-5xl md:text-7xl">
                     We
@@ -62,7 +77,7 @@ function Hero({ isLoading, onScrollNext, canScroll }) {
                     Solutions
                   </h1>
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             <ScrollArrow onClick={onScrollNext} />
