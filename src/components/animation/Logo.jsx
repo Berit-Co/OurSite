@@ -4,14 +4,17 @@ function Logo() {
   return (
     <AnimatePresence>
       {/* Justerade padding och minskade textstorleken */}
-      <motion.div layout className="fixed left-6 top-6 z-50 flex items-center">
+      <motion.div
+        layout
+        className="fixed left-20 top-20 z-50 flex items-center"
+      >
         {/* Container för "BerIT" texten */}
         <div className="mr-2 flex space-x-1">
           {"BerIT ".split("").map((letter, index) => (
             <motion.span
               layout
               key={index}
-              className="font-aeonik text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl"
+              className="font-aeonik text-3xl font-bold tracking-tight text-[#e8d4b4] sm:text-4xl md:text-5xl"
             >
               {letter}
             </motion.span>
@@ -20,7 +23,7 @@ function Logo() {
         {/* Container för "&Co" texten */}
         <motion.div layout className="relative">
           {/* &Co text */}
-          <motion.div className="relative text-4xl font-black text-white sm:text-5xl md:text-6xl">
+          <motion.div className="font-aeonik text-3xl font-bold tracking-tight text-[#d8d8d8] sm:text-4xl md:text-5xl">
             <motion.span
               animate={{
                 textShadow:
@@ -39,7 +42,7 @@ function Logo() {
               }}
               className="relative z-10"
             >
-              &Co
+              & Co
             </motion.span>
           </motion.div>
           {/* Permanent subtle glow */}
