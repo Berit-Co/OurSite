@@ -19,7 +19,8 @@ function Hero({ isLoading, onScrollNext, canScroll }) {
           alt="Hero background"
           className="size-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/40" />
+        <div className="to-black/05 absolute inset-0 bg-gradient-to-r from-black/100 via-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20" />
       </div>
 
       <HeaderBar />
