@@ -4,10 +4,7 @@ function Logo() {
   return (
     <AnimatePresence>
       {/* Justerade padding och minskade textstorleken */}
-      <motion.div
-        layout
-        className="fixed left-20 top-20 z-50 flex items-center"
-      >
+      <motion.div layout className="fixed left-6 top-6 z-50 flex items-center">
         {/* Container för "BerIT" texten */}
         <div className="mr-2 flex space-x-1">
           {"BerIT ".split("").map((letter, index) => (

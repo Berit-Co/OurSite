@@ -2,12 +2,10 @@ import { AnimatePresence, motion } from "framer-motion"
 
 import heroImage from "../../assets/img/hero.webp"
 import AnimatedLine from "../animation/AnimatedLine"
-import Logo from "../animation/Logo"
 import ScrollArrow from "../animation/ScrollArrow"
 import HeaderBar from "../HeaderBar"
-import NavCircle from "../navigation/NavCircle"
 
-function Hero({ isLoading, onScrollNext, canScroll }) {
+function Hero({ isLoading, onScrollNext }) {
   return (
     <section
       className="mobile-hero-padding relative flex h-screen flex-col items-center justify-center 
@@ -24,8 +22,6 @@ function Hero({ isLoading, onScrollNext, canScroll }) {
       </div>
 
       <HeaderBar />
-      <Logo />
-      <NavCircle canScroll={canScroll} />
 
       <AnimatePresence mode="wait">
         {!isLoading && (
