@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
+import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa"
 import { HiMail } from "react-icons/hi"
 
 import { navigationItems } from "./navigation/NavItems"
@@ -7,8 +7,8 @@ import { navigationItems } from "./navigation/NavItems"
 function Footer() {
   const socialLinks = [
     { icon: <FaGithub />, url: "https://github.com/Berit-Co" },
-    { icon: <FaLinkedin />, url: "https://linkedin.com/in/your-profile" },
-    { icon: <FaTwitter />, url: "https://twitter.com/your-twitter" },
+    { icon: <FaInstagram />, url: "https://www.instagram.com/berit.company/" },
+    { icon: <FaFacebook />, url: "https://www.facebook.com/berit.company/" },
     { icon: <HiMail />, url: "mailto:info@beritco.com" },
   ]
 
