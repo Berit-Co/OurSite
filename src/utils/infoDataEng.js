@@ -40,7 +40,17 @@ const sections = [
   },
   {
     projects: [
-      // TO DEBBAN
+      {
+        name: "E-commerce Platforms",
+        tech: ["React", "Node.js", "MongoDB", "Django", "Python"],
+      },
+      { name: "CRM Platforms", tech: ["React", "Node.js", "AWS"] },
+      { name: "Mobile Apps", tech: ["React Native", "Firebase"] },
+      { name: "Healthcare Portals", tech: ["Next.js", "GraphQL"] },
+      {
+        name: "Web Applications",
+        tech: ["Flask", "React", "Vanilla JS", "HTML", "CSS", "Python"],
+      },
     ],
   },
   {
