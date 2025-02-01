@@ -13,7 +13,7 @@ function Hero({ isLoading, onScrollNext, canScroll }) {
         px-4 pt-20 sm:px-6 sm:pt-0 md:px-10"
     >
       <HeaderBar />
-      <Logo isLoading={isLoading} />
+      <Logo />
       <NavCircle canScroll={canScroll} />
 
       <AnimatePresence mode="wait">
@@ -21,23 +21,36 @@ function Hero({ isLoading, onScrollNext, canScroll }) {
           <>
             <AnimatedLine />
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{
-                duration: 0.8,
-                delay: 2.3,
-              }}
-              className="mt-16 w-full sm:mt-0 sm:w-3/4 md:w-1/2"
-            >
+            <div className="mt-16 w-full sm:mt-0 sm:w-3/4 md:w-1/2">
               <div className="flex flex-col gap-2 sm:gap-4">
                 <div className="flex flex-col items-start sm:flex-row sm:items-baseline sm:gap-6">
                   <h1 className="text-4xl font-bold sm:text-5xl md:text-7xl">
                     We
                   </h1>
-                  <h1 className="text-4xl font-bold sm:text-5xl md:text-7xl">
-                    Create
-                  </h1>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    className="content-container flex items-baseline"
+                  >
+                    <ul className="content-container-list">
+                      <li className="content-container-list-item text-4xl font-bold sm:text-5xl md:text-7xl">
+                        Design
+                      </li>
+                      <li className="content-container-list-item text-4xl font-bold sm:text-5xl md:text-7xl">
+                        Create
+                      </li>
+                      <li className="content-container-list-item text-4xl font-bold sm:text-5xl md:text-7xl">
+                        Build
+                      </li>
+                      <li className="content-container-list-item text-4xl font-bold sm:text-5xl md:text-7xl">
+                        Transform
+                      </li>
+                      <li className="content-container-list-item text-4xl font-bold sm:text-5xl md:text-7xl">
+                        Innovate
+                      </li>
+                    </ul>
+                  </motion.div>
                 </div>
                 <div className="flex items-baseline gap-3 sm:gap-6">
                   <h1 className="text-4xl font-bold sm:text-5xl md:text-7xl">
@@ -49,11 +62,8 @@ function Hero({ isLoading, onScrollNext, canScroll }) {
                     Solutions
                   </h1>
                 </div>
-                <p className="mt-4 text-lg text-neutral-400 sm:text-xl md:mt-6 md:text-2xl">
-                  Transforming ideas into digital reality
-                </p>
               </div>
-            </motion.div>
+            </div>
 
             <ScrollArrow onClick={onScrollNext} />
           </>

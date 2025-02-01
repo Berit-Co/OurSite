@@ -22,15 +22,15 @@ function LandingPage() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [activeSection, setActiveSection] = useState(0)
 
-  // Loading effect
+  // Loading effect - UPPDATERAD MED KORTARE TIDER
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false)
-    }, 4000) // Vänta på loading animation
+    }, 1000) // Ändrad från 4000 till 1000
 
     const textTimer = setTimeout(() => {
       setCanScroll(true)
-    }, 7000) // Vänta tills text animation är klar (4s + 3s för text)
+    }, 1500) // Ändrad från 7000 till 1500
 
     return () => {
       clearTimeout(timer)
@@ -97,7 +97,6 @@ function LandingPage() {
       const viewportHeight = window.innerHeight
       const documentHeight = document.documentElement.scrollHeight
 
-      // Särskild hantering för sista sektionen
       if (scrollPosition + viewportHeight >= documentHeight) {
         setActiveSection(sections.length - 1)
         return
