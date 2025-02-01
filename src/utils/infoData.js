@@ -4,7 +4,8 @@ import {
   IconUiUx,
   IconWebDevelopment,
 } from "@/components/ui/icons"
-import { angeleImg, debbieImg, kimImg, sandraImg } from "@/assets/img"
+
+//import { angeleImg, debbieImg, kimImg, sandraImg } from "@/assets/img"
 
 const sections = [
   {
@@ -112,30 +113,6 @@ const sections = [
         question: "What does the pricing model look like?",
         answer:
           "We offer flexible pricing models based on the project's scope and your specific needs. Contact us for a detailed quote or check our Offers section.",
-      },
-    ],
-  },
-  {
-    members: [
-      {
-        img: sandraImg,
-        name: "Sandra Bergstrom",
-        role: ["UI/UX", "Designer"],
-      },
-      {
-        img: kimImg,
-        name: "Kim Bergstrom",
-        role: ["Backend", "Developer"],
-      },
-      {
-        img: debbieImg,
-        name: "Debbie Bergstrom",
-        role: ["Frontend", "Developer"],
-      },
-      {
-        img: angeleImg,
-        name: "Angele Perrot",
-        role: ["Graphic", "Designer"],
       },
     ],
   },

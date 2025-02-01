@@ -6,7 +6,6 @@ export const navigationItems = [
   { id: "projects", title: "Projects" },
   { id: "pricing", title: "Pricing" },
   { id: "faq", title: "FAQ" },
-  { id: "team", title: "Team" },
   { id: "consultation", title: "Contact" },
 ]
 
