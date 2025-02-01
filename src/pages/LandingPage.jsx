@@ -13,7 +13,6 @@ import {
   Projects,
   Services,
   Stats,
-  Teams,
 } from "../components/sections"
 import infoData from "../utils/infoData"
 
@@ -182,9 +181,6 @@ function LandingPage() {
         </section>
         <section id="faq">
           <FAQ faqs={sections[5].faqs} />
-        </section>
-        <section id="team">
-          <Teams members={sections[6].members} />
         </section>
         <section id="consultation">
           <Consultation />
