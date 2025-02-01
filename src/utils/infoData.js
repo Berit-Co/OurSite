@@ -4,7 +4,8 @@ import {
   IconUiUx,
   IconWebDevelopment,
 } from "@/components/ui/icons"
-import { angeleImg, debbieImg, kimImg, sandraImg } from "@/assets/img"
+
+//import { angeleImg, debbieImg, kimImg, sandraImg } from "@/assets/img"
 
 const sections = [
   {
@@ -17,10 +18,12 @@ const sections = [
   {
     about: {
       badge: "About us",
-      title: "Our Journey, Vision, And Values",
+      title: "BerIT & Company - Visions & Values",
       description: [
-        "We are a family-owned business that puts the customer at the center. With our personal approach and dedication to quality, we build long-term partnerships.",
-        "Our strength lies in combining technical expertise with a genuine understanding of our customers needs, making every project a shared journey towards success.",
+        "At BerIT & Company, we're more than just a web development team—we're a family. Founded by three siblings, the name BerIT is a blend of our last name, Bergström, and our passion for IT. Each of us brings a unique skill set and a different perspective on web development and design, allowing us to complement each other perfectly.",
+        "Our strength lies in this diversity, ensuring that every project receives a well-thought-out and balanced approach. We strive to create inclusive and accessible digital solutions that adhere to the latest standards, such as WCAG 2.2. With the upcoming Digital Accessibility Act, coming into effect on June 28, 2025, it is more important than ever to ensure that websites are accessible to everyone.",
+        "While we are at the core of BerIT & Company, we also collaborate with talented consultants when needed, expanding our expertise to meet any challenge. Our vision is to grow into a powerful digital tool with unlimited possibilities—so that nothing is impossible to create.",
+        "Let's build something great together!",
       ],
       rating: {
         stars: "5 Star",
@@ -112,30 +115,6 @@ const sections = [
         question: "What does the pricing model look like?",
         answer:
           "We offer flexible pricing models based on the project's scope and your specific needs. Contact us for a detailed quote or check our Offers section.",
-      },
-    ],
-  },
-  {
-    members: [
-      {
-        img: sandraImg,
-        name: "Sandra Bergstrom",
-        role: ["UI/UX", "Designer"],
-      },
-      {
-        img: kimImg,
-        name: "Kim Bergstrom",
-        role: ["Backend", "Developer"],
-      },
-      {
-        img: debbieImg,
-        name: "Debbie Bergstrom",
-        role: ["Frontend", "Developer"],
-      },
-      {
-        img: angeleImg,
-        name: "Angele Perrot",
-        role: ["Graphic", "Designer"],
       },
     ],
   },

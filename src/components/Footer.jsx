@@ -1,15 +1,17 @@
 import { motion } from "framer-motion"
 import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa"
 import { HiMail } from "react-icons/hi"
+import { PiLinktreeLogoFill } from "react-icons/pi"
 
 import { navigationItems } from "./navigation/NavItems"
 
 function Footer() {
   const socialLinks = [
     { icon: <FaGithub />, url: "https://github.com/Berit-Co" },
-    { icon: <FaInstagram />, url: "https://www.instagram.com/berit.company/" },
-    { icon: <FaFacebook />, url: "https://www.facebook.com/berit.company/" },
-    { icon: <HiMail />, url: "mailto:info@beritco.com" },
+    { icon: <FaInstagram />, url: "https://www.instagram.com/beritco.se" },
+    { icon: <FaFacebook />, url: "https://www.facebook.com/beritco" },
+    { icon: <PiLinktreeLogoFill />, url: "https://linktr.ee/beritco" },
+    { icon: <HiMail />, url: "mailto:info@beritco.se" },
   ]
 
   const footerLinks = navigationItems.filter((item) =>

@@ -98,7 +98,7 @@ function Consultation() {
           <div>
             <p className="mt-2 px-2 text-sm text-neutral-400">
               Or just reach out manually to{" "}
-              <span className="font-bold">business@beritco.com</span>
+              <span className="font-bold">info@beritco.se</span>
             </p>
           </div>
         </motion.form>
