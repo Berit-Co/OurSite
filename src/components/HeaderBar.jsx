@@ -27,19 +27,15 @@ function HeaderBar({ canScroll }) {
         backdropFilter: backdropBlur,
       }}
       className="fixed inset-x-0 top-0 z-40 h-24 border-b border-white/0 transition-colors
-        duration-300 sm:h-24 md:h-32"
+        duration-300"
     >
-      <div className="flex justify-end">
-        <div className="absolute right-16 top-[22.5px] flex space-x-8 px-5">
-          <div className="flex items-center">
-            <Logo />
-          </div>
-          <div className="flex items-center">
-            <Language />
-          </div>
-          <div className="flex items-center">
-            <NavCircle canScroll={canScroll} />
-          </div>
+      <div className="flex h-full items-center justify-between px-4 pt-4 sm:px-8 sm:pt-5 md:px-16 md:pt-6">
+        <div className="flex items-center">
+          <Logo />
+        </div>
+        <div className="flex items-center space-x-4 sm:space-x-6 md:space-x-8">
+          <Language />
+          <NavCircle canScroll={canScroll} />
         </div>
       </div>
     </motion.header>
