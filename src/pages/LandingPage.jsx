@@ -166,10 +166,6 @@ function LandingPage() {
         <section id="projects">
           <Projects projects={sections[3].projects} />
         </section>
-        <section id="stats">
-          <Stats stats={statsData} />
-        </section>
-
         <section id="services">
           <Services services={sections[2].services} />
         </section>
@@ -181,6 +177,9 @@ function LandingPage() {
         </section>
         <section id="about">
           <About about={sections[1].about} />
+        </section>
+        <section id="stats">
+          <Stats stats={statsData} />
         </section>
         <section id="faq">
           <FAQ faqs={sections[5].faqs} />
