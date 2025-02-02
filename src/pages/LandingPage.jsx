@@ -163,26 +163,26 @@ function LandingPage() {
             canScroll={canScroll}
           />
         </section>
-        <section id="stats">
-          <Stats stats={statsData} />
-        </section>
-        <section id="about">
-          <About about={sections[1].about} />
+        <section id="projects">
+          <Projects projects={sections[3].projects} />
         </section>
         <section id="services">
           <Services services={sections[2].services} />
         </section>
-        <section id="projects">
-          <Projects projects={sections[3].projects} />
-        </section>
         <section id="pricing">
           <Pricing plans={sections[4].plans} />
         </section>
-        <section id="faq">
-          <FAQ faqs={sections[5].faqs} />
-        </section>
         <section id="consultation">
           <Consultation />
+        </section>
+        <section id="about">
+          <About about={sections[1].about} />
+        </section>
+        <section id="stats">
+          <Stats stats={statsData} />
+        </section>
+        <section id="faq">
+          <FAQ faqs={sections[5].faqs} />
         </section>
         <section id="footer">
           <Footer />

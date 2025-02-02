@@ -5,7 +5,7 @@ import AnimatedLine from "../animation/AnimatedLine"
 import ScrollArrow from "../animation/ScrollArrow"
 import HeaderBar from "../HeaderBar"
 
-function Hero({ isLoading, onScrollNext }) {
+function Hero({ isLoading, onScrollNext, canScroll }) {
   return (
     <section
       className="mobile-hero-padding relative flex h-screen flex-col items-center justify-center 
@@ -21,7 +21,7 @@ function Hero({ isLoading, onScrollNext }) {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20" />
       </div>
 
-      <HeaderBar />
+      <HeaderBar canScroll={canScroll} />
 
       <AnimatePresence mode="wait">
         {!isLoading && (
