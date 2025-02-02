@@ -22,7 +22,7 @@ function NavCircle({ canScroll }) {
   return (
     <>
       <motion.button
-        className={`fixed right-4 top-4 z-[60] flex size-12 items-center justify-center rounded-full
+        className={`flex size-12 items-center justify-center rounded-full
           bg-white/5 backdrop-blur-sm ${
             canScroll
               ? "cursor-pointer hover:bg-white/10"
