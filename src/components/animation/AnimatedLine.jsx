@@ -13,7 +13,7 @@ function AnimatedLine() {
   }, [])
 
   return (
-    <div className="mb-20 w-full overflow-hidden">
+    <div className="w-full overflow-hidden">
       <AnimatePresence>
         {isVisible && (
           <motion.div
