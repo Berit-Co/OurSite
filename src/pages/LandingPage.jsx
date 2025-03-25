@@ -9,10 +9,8 @@ import {
   Consultation,
   FAQ,
   Hero,
-  Pricing,
   Projects,
   Services,
-  Stats,
 } from "../components/sections"
 import infoData from "../utils/infoData"
 
@@ -125,7 +123,8 @@ function LandingPage() {
   // Data for sections
   const sections = infoData
 
-  const statsData = sections[0].stats.map((stat) => {
+  {
+    /*const statsData = sections[0].stats.map((stat) => {
     const number = parseInt(stat.number.replace(/[%+]/g, ""))
     const suffix = stat.number.match(/[%+]/g)?.[0] || ""
 
@@ -134,7 +133,8 @@ function LandingPage() {
       label: stat.label,
       suffix,
     }
-  })
+  })*/
+  }
 
   return (
     <div
@@ -169,18 +169,18 @@ function LandingPage() {
         <section id="services">
           <Services services={sections[2].services} />
         </section>
-        <section id="pricing">
+        {/*<section id="pricing">
           <Pricing plans={sections[4].plans} />
-        </section>
+        </section>//*/}
         <section id="consultation">
           <Consultation />
         </section>
         <section id="about">
           <About about={sections[1].about} />
         </section>
-        <section id="stats">
+        {/*<section id="stats">
           <Stats stats={statsData} />
-        </section>
+        </section>*/}
         <section id="faq">
           <FAQ faqs={sections[5].faqs} />
         </section>

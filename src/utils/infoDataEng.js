@@ -19,7 +19,7 @@ const sections = [
       badge: "About us",
       title: "BerIT & Company - Visions & Values",
       description: [
-        "At BerIT & Company, we're more than just a web development team—we're a family. Founded by three siblings, the name BerIT is a blend of our last name, Bergström, and our passion for IT. Each of us brings a unique skill set and a different perspective on web development and design, allowing us to complement each other perfectly.",
+        "At BerIT & Company, we're more than just a web development team—we're a family. Each of us brings a unique skill set and a different perspective on web development and design, allowing us to complement each other perfectly.",
         "Our strength lies in this diversity, ensuring that every project receives a well-thought-out and balanced approach. We strive to create inclusive and accessible digital solutions that adhere to the latest standards, such as WCAG 2.2. With the upcoming Digital Accessibility Act, coming into effect on June 28, 2025, it is more important than ever to ensure that websites are accessible to everyone.",
         "While we are at the core of BerIT & Company, we also collaborate with talented consultants when needed, expanding our expertise to meet any challenge. Our vision is to grow into a powerful digital tool with unlimited possibilities—so that nothing is impossible to create.",
         "Let's build something great together!",
